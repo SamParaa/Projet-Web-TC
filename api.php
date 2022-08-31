@@ -1,6 +1,7 @@
-$pdo = new PDO(connexion bdd) 
+<?php
+$dbh = new PDO('mysql:host=localhost;dbname=tc_projet_web', $root);
 switch($_GET['service']){
-      case 'delete_contact': 
+      case 'delete_contact':
                 $pdo->prepare('delete * from contact where id = :id_contact');
                 $pdo->bindParam(':id_contact', $_GET['id_contact']);
                $pdo->execute();
@@ -49,7 +50,4 @@ switch($_GET['service']){
                 $pdo->bindParam(':email_contact', $_GET['email_contact']);
                 $pdo->bindParam(':poste_contact', $_GET['poste_contact']);
                $pdo->execute();
-    break;
-
-
-              
+    break;}
