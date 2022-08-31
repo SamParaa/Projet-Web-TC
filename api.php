@@ -14,4 +14,4 @@ switch($_GET['service']){
                  $pdo->prepare('INSERT INTO entreprise ( nom,relation,adresse,etc) VALUES (:nom,:relation');
                 $pdo->bindParam(':nom_entreprise', $_GET['nom_entreprise']);
                 $pdo->bindParam(':relation', $_GET['relation']);
-               $pdo->execute();
+               $pdo->execute();ggggggggggggggggggggggggggggg
